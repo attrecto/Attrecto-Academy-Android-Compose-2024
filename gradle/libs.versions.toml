@@ -1,25 +1,31 @@
 [versions]
-agp = "8.6.1"
-kotlin = "2.0.20"
-coreKtx = "1.13.1"
-lifecycle = "2.8.6"
-compose = "1.9.2"
-composeBom = "2024.09.03"
+agp-version = "8.6.1"
+kotlin-version = "2.0.20"
+coreKtx-version = "1.13.1"
+lifecycle-version = "2.8.6"
+compose-version = "1.9.2"
+composeBom-version = "2024.09.03"
+coil-version = "2.4.0"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle" }
-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "compose" }
-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx-version" }
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-version" }
+# TODO 5.1: viewmodelhez kell dependency:
+# lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle-version" }
+# lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle-version" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "compose-version" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom-version" }
 compose-ui = { group = "androidx.compose.ui", name = "ui" }
 compose-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 compose-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 compose-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 material3 = { group = "androidx.compose.material3", name = "material3" }
 compose-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+# TODO 6.1: coil behúzása:
+# coil-compose = {  group = "io.coil-kt", name = "coil-compose",version.ref = "coil-version"}
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+android-application = { id = "com.android.application", version.ref = "agp-version" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin-version" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin-version" }
 

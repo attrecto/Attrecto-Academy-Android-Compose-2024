@@ -45,15 +45,19 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
+// TODO 5.2: viewmodelhez kell dependency:
+//    implementation(libs.lifecycle.viewmodel)
+//    implementation(libs.lifecycle.runtime.compose)
     implementation(libs.activity.compose)
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
     implementation(libs.compose.graphics)
     implementation(libs.compose.preview)
     implementation(libs.material3)
+// TODO: 6.2:
+//    implementation(libs.coil.compose)
     debugImplementation(libs.compose.tooling)
     debugImplementation(libs.compose.test.manifest)
 
